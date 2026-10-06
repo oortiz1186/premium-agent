@@ -7,7 +7,7 @@ Puente Windows x86 entre CRM MIDA y el SDK de CONTPAQi Comercial Premium.
 - Windows con CONTPAQi Comercial Premium instalado.
 - SDK de Comercial disponible en `C:\Program Files (x86)\Compac\COMERCIAL`.
 - `MGWServicios.dll` y `CAC.ini` de la misma versión de Premium.
-- Empresa de pruebas disponible, inicialmente `C:\Compac\Empresas\adMIDA_PRUEBAS`.
+- Empresa de pruebas disponible, inicialmente `C:\Compac\Empresas\adEMPRESA_PRUEBA`.
 
 ## Publicar
 
@@ -25,12 +25,12 @@ C:\MIDA\PremiumAgent
 
 Editar `appsettings.json` y cambiar como mínimo `PremiumAgent:ApiKey`.
 
-Mientras se prueba, conservar:
+El paquete se publica listo para la empresa de pruebas del servidor. Antes de habilitar escrituras, validar primero `/health`. Conservar inicialmente:
 
 ```json
-"CompanyDirectory": "C:\\Compac\\Empresas\\adMIDA_PRUEBAS",
-"AllowedCompanyDirectoryName": "adMIDA_PRUEBAS",
-"AllowWrites": true
+"CompanyDirectory": "C:\\Compac\\Empresas\\adEMPRESA_PRUEBA",
+"AllowedCompanyDirectoryName": "adEMPRESA_PRUEBA",
+"AllowWrites": false
 ```
 
 El agente bloquea escrituras si el nombre de la empresa real no coincide con `AllowedCompanyDirectoryName`.
